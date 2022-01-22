@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+    <title>Racing Onboards</title>
+</head>
+
+<body>
+    <div class="loading" id="loading">Loading...</div>
+    <div class="playerContainer">
+        <div id="player"></div>
+    </div>
+    <div class="sidebarToggle white">
+        <i class='fas fa-eye' id="toggle"></i>
+    </div>
+    <div class="sidebar">
+        <h2>Drive & Listen</h2>
+        <div class="locationCotainer">
+            <h4>Scroll for more tracks</h4>
+            <div class="locations">
+                <ul id="locations"></ul>
+            </div>
+        </div>
+        <div class="carNoise">
+            <h4>Car Noise</h4>
+            <div class="mute" id="mute">Off</div>
+        </div>
+        <div class="audio">
+            <h4>Radio</h4>
+            <div class="audioControls">
+                <div class="controls">
+                    <i class='fas fa-step-backward' id="prev" aria-hidden="true"></i>
+                    <i class='fas fa-play' id="play" aria-hidden="true"></i>
+                    <i class='fas fa-step-forward' id="next" aria-hidden="true"></i>
+                </div>
+                <div class="volume">
+                    <input type="range" min="1" max="100" value="10" id="volume" onchange="changeVolume(this)">
+                </div>
+            </div>
+            <audio id="audio" crossorigin autoplay src=""></audio>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
