@@ -6,6 +6,8 @@ const play = document.querySelector('#play');
 const previous = document.querySelector('#prev');
 const next = document.querySelector('#next');
 const li = document.querySelector('.listElements')
+const speed = document.querySelector('#speed')
+const volumeCar = document.querySelector('#volumeCar')
 let currentTrackIndex = 0;
 let currentTrack;
 let currentVideoIndex = 0;
@@ -74,10 +76,12 @@ const data = [
         track: 'Silverstone',
         videos: ['yEpQTbN41X8', '5YKY0QjHaLY', 'h7dXIURDkyk'],
         music: ['https://radio.canstream.co.uk:8039/live.mp3', 'https://stream.live.vc.bbcmedia.co.uk/bbc_radio_two', 'http://188.165.192.5:8067/;']
-    },
+    }
 
 
 ];
+
+const availableSpeeds = [0.5, 1, 1.5, 2];
 
 function onload() {
     //City
@@ -125,6 +129,17 @@ function onload() {
         locations.append(locationElement)
 
     });
+    availableSpeeds.forEach((el, idx) => {
+        let speedEl = document.createElement('span');
+        speedEl.id = el;
+        speedEl.innerHTML = el + 'x';
+        speedEl.addEventListener('click', (e) => {
+            player.setPlaybackRate(Number(e.target.id))
+            console.log(e.target.id)
+
+        })
+        speed.append(speedEl)
+    })
     highlight()
 };
 onload()
@@ -218,6 +233,11 @@ toggle.addEventListener('click', () => {
     document.querySelector('.sidebar').classList.toggle('hide');
 })
 
+function changeCarVolume(e) {
+    console.log(e.value)
+    player.setVolume(e.value)
+}
+
 function changeVolume(e) {
     audio.volume = parseFloat(e.value / 100)
 }
@@ -276,7 +296,8 @@ function onPlayerStateChange(event) {
         }
 
         currentVideo = currentTrack.videos[currentVideoIndex]
-        player.loadVideoById({ videoid: currentVideo })
+        let videoChangedId = new String(currentVideo)
+        player.loadVideoById(videoChangedId)
         highlight()
     }
     if (event.data == YT.PlayerState.BUFFERING) {
