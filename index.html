@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="loading" id="loading"></div>
+    <div class="loading" id="loading">Loading...</div>
     <div class="playerContainer">
         <div id="player"></div>
     </div>
@@ -30,9 +30,18 @@
                 <ul id="locations"></ul>
             </div>
         </div>
+        <div class="videoSpeed">
+            <h4>Video Speed</h4>
+            <div class="speed" id="speed">
+
+            </div>
+        </div>
         <div class="carNoise">
             <h4>Car Noise</h4>
             <div class="mute" id="mute">Off</div>
+            <div class="volumeCar">
+                <input type="range" min="1" max="100" value="10" id="volumeCar" onchange="changeCarVolume(this)">
+            </div>
         </div>
         <div class="audio">
             <h4>Radio</h4>
