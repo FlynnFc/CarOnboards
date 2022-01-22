@@ -103,7 +103,7 @@ function onload() {
         locationElement.id = idx;
         locationElement.classList.add('listElements')
         locationElement.addEventListener('click', (e) => {
-           currentTrackIndex = Number(e.target.id);
+            currentTrackIndex = Number(e.target.id);
             currentTrack = data[currentTrackIndex]
             // Video      
             currentVideoIndex = randomNumber(currentTrack.videos.length);
