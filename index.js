@@ -103,12 +103,14 @@ function onload() {
         locationElement.id = idx;
         locationElement.classList.add('listElements')
         locationElement.addEventListener('click', (e) => {
-            currentTrackIndex = Number(e.target.id);
+                     currentTrackIndex = Number(e.target.id);
             currentTrack = data[currentTrackIndex]
-            // Video
-            currentVideoIndex = randomNumber(currentTrack.videos.length);
-            currentVideo = currentTrack.videos[currentVideoIndex];
-            player.loadVideoById({ videoid: currentVideo })
+            // Video      
+            currentVideo = currentTrack.videos[currentVideoIndex]
+            let videoChangedId = new String(currentVideo)
+            player.loadVideoById(videoChangedId)
+            highlight()
+            console.log(currentVideo)
             // Audio
             currentAudioIndex = randomNumber(currentTrack.music.length);
             currentAudio = currentTrack.music[currentAudioIndex];
@@ -117,8 +119,6 @@ function onload() {
             audio.volume = 0.1;
             play.classList.remove('fa-play');
             play.classList.add('fa-pause');
-            player.loadVideoByUrl({ videoid: currentVideo })
-            highlight()
 
         })
         locations.append(locationElement)
