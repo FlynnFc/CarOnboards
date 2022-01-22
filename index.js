@@ -103,10 +103,11 @@ function onload() {
         locationElement.id = idx;
         locationElement.classList.add('listElements')
         locationElement.addEventListener('click', (e) => {
-                     currentTrackIndex = Number(e.target.id);
+           currentTrackIndex = Number(e.target.id);
             currentTrack = data[currentTrackIndex]
             // Video      
-            currentVideo = currentTrack.videos[currentVideoIndex]
+            currentVideoIndex = randomNumber(currentTrack.videos.length);
+            currentVideo = currentTrack.videos[currentVideoIndex];
             let videoChangedId = new String(currentVideo)
             player.loadVideoById(videoChangedId)
             highlight()
