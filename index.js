@@ -24,12 +24,12 @@ const data = [
     },
     {
         track: 'Spa Francorchamps',
-        videos: ['F_3SNisnuRE', '5VYYNIfLiNo'],
+        videos: ['F_3SNisnuRE', '5VYYNIfLiNo','dxzJbfWctdU'],
         music: ['https://streamingp.shoutcast.com/NostalgieJazz-aac?listening-from-radio-garden=1642858057', 'https://radios.rtbf.be/classic21-128.mp3', 'https://radios.rtbf.be/laprem1ere-128.mp3']
     },
     {
         track: 'Abu Dhabi',
-        videos: ['TZXtq85roqU', 'ONVPBwguT7I', 'XfXMiwN878s'],
+        videos: ['TZXtq85roqU', 'ONVPBwguT7I','jcp-kmnmJFM'],
         music: ['https://antennebadkreuznach-ais-edge-400b-dus-dtag-cdn.cast.addradio.de/antennebadkreuznach/live/mp3/high/stream.mp3', 'http://stream.radiorsl.de:8000/radiorsl', 'https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3']
     },
     {
@@ -98,9 +98,8 @@ function onload() {
     console.log(currentTrack);
     audio.src = currentAudio;
     audio.volume = 0.1;
-    play.classList.remove('fa-play');
-    play.classList.add('fa-pause');
-
+    // play.classList.remove('fa-play');
+    // play.classList.add('fa-pause');
     data.forEach((el, idx) => {
         let locationElement = document.createElement('li');
         locationElement.innerText = el.track;
@@ -127,28 +126,38 @@ function onload() {
 
         })
         locations.append(locationElement)
-
     });
+
+
     availableSpeeds.forEach((el, idx) => {
         let speedEl = document.createElement('span');
         speedEl.id = el;
         speedEl.innerHTML = el + 'x';
         speedEl.addEventListener('click', (e) => {
-            player.setPlaybackRate(Number(e.target.id))
-            console.log(e.target.id)
+            speedEl.classList.remove('on');
+            player.setPlaybackRate(Number(e.target.id));
+            console.log(e.target.id);
+
+
 
         })
-        speed.append(speedEl)
+        speed.append(speedEl);
     })
-    highlight()
-};
-onload()
+    highlight();
 
+};
+onload();
+
+// function videoCredit () { 
+//   const credit = document.querySelector('#sourceVideoLink');
+//   credit.href = player.getVideoUrl();
+//   console.log(credit.href, 'is the source');
+// }
 
 function highlight() {
     console.log(locations.childNodes);
     locations.childNodes.forEach((el, idx) => {
-        console.log(el)
+        console.log(el);
         el.classList.remove('active');
         if (idx == currentTrackIndex) {
             el.classList.add('active');
@@ -231,6 +240,11 @@ mute.addEventListener('click', () => {
 
 toggle.addEventListener('click', () => {
     document.querySelector('.sidebar').classList.toggle('hide');
+    if (toggle.classList == 'fas fa-eye') {
+        toggle.classList = 'fas fa-eye-slash'
+    } else {
+        toggle.classList = 'fas fa-eye'
+    }
 })
 
 function changeCarVolume(e) {
@@ -241,6 +255,7 @@ function changeCarVolume(e) {
 function changeVolume(e) {
     audio.volume = parseFloat(e.value / 100)
 }
+
 // 2. This code loads the IFrame Player API code asynchronously.
 const tag = document.createElement('script');
 
@@ -305,8 +320,13 @@ function onPlayerStateChange(event) {
     }
     if (event.data == YT.PlayerState.PLAYING && !done) {
         loading.style.display = 'flex';
+        const credit = document.querySelector('#sourceVideoLink');
+        credit.href = player.getVideoUrl();
+        console.log(credit.href, 'is the source');
         setTimeout(() => {
             loading.style.display = 'none'
         }, 1000)
     }
 }
+
+
