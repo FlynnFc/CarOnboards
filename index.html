@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta name=description content="Watch racing onboards on lots of tracks">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,17 +16,17 @@
 </head>
 
 <body>
-    <div class="loading" id="loading">Loading...</div>
+    <div class="loading" id="loading"></div>
     <div class="playerContainer">
         <div id="player"></div>
     </div>
     <div class="sidebarToggle white">
-        <i class='fas fa-eye' id="toggle"></i>
+        <i class='fas fa-eye-slash' id="toggle"></i>
     </div>
     <div class="sidebar">
         <h2>Drive & Listen</h2>
         <div class="locationCotainer">
-            <h4>Scroll for more tracks</h4>
+            <h3>Scroll for more tracks</h3>
             <div class="locations">
                 <ul id="locations"></ul>
             </div>
@@ -55,9 +56,17 @@
                     <input type="range" min="1" max="100" value="10" id="volume" onchange="changeVolume(this)">
                 </div>
             </div>
-            <audio id="audio" crossorigin autoplay src=""></audio>
+            <audio id="audio" crossorigin src=""></audio>
+        </div>
+        <div class="credits">
+        <p>Inspired by <a rel="noreferrer" target="_blank" href="https://driveandlisten.herokuapp.com/">Drive and Listen</a></p>
+        <p>made by Flynn</p>
+        <a id="sourceVideoLink" target="_blank" href=''>soruce video</a>
         </div>
     </div>
+        
+    </div>
+
     <script src="index.js"></script>
 </body>
 
