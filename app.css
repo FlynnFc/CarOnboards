@@ -1,202 +1,234 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 body {
-    height: 100vh;
-
+  height: 100vh;
 }
 
 #player {
-    pointer-events: none;
-    z-index: -99;
-
+  pointer-events: none;
+  z-index: -99;
 }
 
 .sidebar {
-    font-family: 'Montserrat', sans-serif;
-    z-index: 99;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    max-width: 250px;
-    width: 40vw;
-    height: 100vh;
-    color: white;
-    box-shadow: .2px 4px 5px rgba(0, 0, 0, 0.2);
-     background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  font-family: "Montserrat", sans-serif;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  max-width: 250px;
+  width: 40vw;
+  height: 100vh;
+  color: white;
+  box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in;
 }
 
 .sidebar h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .sidebarToggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  height: 25px;
+  border-radius: 10px;
 }
 
 .white {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    border: 50%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border: 50%;
 }
 
 .locationCotainer {
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid white;
-    border-radius: 2px;
-    margin: 20px 0px;
-
-} .locationCotainer h4 {
-    width: inherit;
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 10px;
-    text-align: center;
-    font-size: 0.8rem;
-    border-bottom: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  border-radius: 2px;
+  margin: 20px 0px;
+}
+.locationCotainer h4 {
+  width: inherit;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  border-bottom: 1px solid white;
 }
 
 .locations {
-    max-height: 25vh;
-    overflow: scroll;
+  max-height: 25vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .locations li {
-    padding: 2px 5px;
-    cursor: pointer;
-    font-size: 0.9rem;
+  padding: 2px 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
-.locations li:hover, .mute:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+.locations li:hover,
+.mute:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .active {
-    background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .carNoise {
-    text-align: center;
-    padding: 5px 0px;
+  text-align: center;
+  padding: 5px 0px;
 }
 
 .carNoise h4 {
-    padding: 5px 0px;
+  padding: 5px 0px;
 }
 
 .mute {
-    cursor: pointer;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid white;
-    border-radius: 2px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  border-radius: 2px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .audioControls {
-    padding: 0px 0px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
-    border: 1px solid white;
+  padding: 0px 0px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  border: 1px solid white;
 }
 
 .audio h4 {
-    text-align: center;
-    padding: 5px 0px;
+  text-align: center;
+  padding: 5px 0px;
 }
 
 .controls {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 15px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px 0px;
 }
 
 .hide {
-    display: none;
+  /* display: none; */
+  transform: translateX(101%);
+  transition: transform 0.3s ease-in;
 }
 
 .loading {
-    height: 100vh;
-    width: 100%;
-    z-index: 98;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    background: rgb(8,0,143);
-    color: white;
-background: linear-gradient(90deg, rgba(8,0,143,1) 0%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%);
+  height: 100vh;
+  width: 100%;
+  z-index: 98;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: rgb(8, 0, 143);
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(55, 52, 46, 1) 0%,
+    rgba(0, 0, 0, 1) 100%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
-@media only screen and (max-width: 768px){
-    #player {
-        transform: translateX(-30%);
-    }
+@media only screen and (max-width: 768px) {
+  #player {
+    transform: translateX(-30%);
+  }
 }
 
 playerContainer {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
 }
 
 #player {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .speed {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid white;
-    padding: 10px 0px;
-    font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  padding: 10px 0px;
+  font-size: 1rem;
 }
 
 .speed span:hover {
-    color:rgba(244, 244, 244, 0.5);
+  color: rgba(244, 244, 244, 0.5);
 }
 
 .videoSpeed {
-    margin: 5px 0px;
+  margin: 5px 0px;
 }
 
 .videoSpeed h4 {
-    text-align: center;
-    padding: 5px 0px;
+  text-align: center;
+  padding: 5px 0px;
 }
 .volumeCar {
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 2px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-top: 0px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 2px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top: 0px;
 }
 
 .volumeCar input {
-    top: 50%;
-    left: 50%;
+  top: 50%;
+  left: 50%;
+}
+
+.on {
+  color: cornflowerblue;
+}
+
+.credits {
+  display: flex;
+  font-size: 12px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  line-height: 15px;
+  padding-top: 20px;
+}
+.credits a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.credits a:hover {
+  text-decoration: underline;
 }
