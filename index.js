@@ -20,7 +20,7 @@ const data = [
     {
         track: 'Nordschleife',
         videos: ['mGF7AgzlPMk', 'nqmvMIZCkZ4', 'ERDHI75UzXk', 'qnJOC_dDXzM'],
-        music: ['https://antennebadkreuznach-ais-edge-400b-dus-dtag-cdn.cast.addradio.de/antennebadkreuznach/live/mp3/high/stream.mp3', 'http://stream.radiorsl.de:8000/radiorsl', 'https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3']
+        music: ['https://antennebadkreuznach-ais-edge-400b-dus-dtag-cdn.cast.addradio.de/antennebadkreuznach/live/mp3/high/stream.mp3', 'https://stream.radiorsl.de:8000/radiorsl', 'https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3']
     },
     {
         track: 'Spa Francorchamps',
@@ -30,12 +30,12 @@ const data = [
     {
         track: 'Abu Dhabi',
         videos: ['TZXtq85roqU', 'ONVPBwguT7I','jcp-kmnmJFM'],
-        music: ['https://antennebadkreuznach-ais-edge-400b-dus-dtag-cdn.cast.addradio.de/antennebadkreuznach/live/mp3/high/stream.mp3', 'http://stream.radiorsl.de:8000/radiorsl', 'https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3']
+        music: ['https://antennebadkreuznach-ais-edge-400b-dus-dtag-cdn.cast.addradio.de/antennebadkreuznach/live/mp3/high/stream.mp3', 'https://stream.radiorsl.de:8000/radiorsl', 'https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3']
     },
     {
         track: 'Le Mans',
         videos: ['61LmFVfOBt0', 'yKYj-nZGewk', 'yT2YVhQs69I', 'wdMOUcBVX84'],
-        music: ['https://sweetfm-perche72.ice.infomaniak.ch/sweetfm-perche72-192.mp3', 'http://80.82.229.202:8000/radiog.mp3', 'https://diffusion.lafrap.fr/webradio-cholet.mp3']
+        music: ['https://sweetfm-perche72.ice.infomaniak.ch/sweetfm-perche72-192.mp3', 'https://80.82.229.202:8000/radiog.mp3', 'https://diffusion.lafrap.fr/webradio-cholet.mp3']
     },
     {
         track: 'Daytona',
@@ -45,22 +45,22 @@ const data = [
     {
         track: 'Brands Hatch',
         videos: ['SWDo_q6PFQs', 'gEvKuEsOOI', 'bD5SlIem8dY'],
-        music: ['https://worldwidefm.out.airtime.pro/worldwidefm_c', 'https://media-ice.musicradio.com/ClassicFMMP3', 'http://hyades.shoutca.st:8555/stream']
+        music: ['https://worldwidefm.out.airtime.pro/worldwidefm_c', 'https://media-ice.musicradio.com/ClassicFMMP3', 'https://hyades.shoutca.st:8555/stream']
     },
     {
         track: 'Nürburgring',
         videos: ['0al_OVwenA8', 't8XMzYjmKLc'],
-        music: ['http://stream.webthings.hu:8000/fm95-x-128.mp3', 'http://stream.radiorsl.de:8000/radiorsl', 'https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3']
+        music: ['https://stream.webthings.hu:8000/fm95-x-128.mp3', 'https://stream.radiorsl.de:8000/radiorsl', 'https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3']
     },
     {
         track: 'Hungaroring',
         videos: ['5Rw_5dMDbQ0', 'w3kaBQTrC2w', 'FJQ4QyJNuA8'],
-        music: ['https://nl.digitalrm.pt:8024/stream', 'https://s04.diazol.hu:9502/live.mp3/;', 'http://137.74.85.85:7320/hq']
+        music: ['https://nl.digitalrm.pt:8024/stream', 'https://s04.diazol.hu:9502/live.mp3/;', 'https://137.74.85.85:7320/hq']
     },
     {
         track: 'Portimao ',
         videos: ['dvk7UD3ug4w', 'wXCGsBwIFTg', 'I8FjcORW-Kw'],
-        music: ['https://antennebadkreuznach-ais-edge-400b-dus-dtag-cdn.cast.addradio.de/antennebadkreuznach/live/mp3/high/stream.mp3', 'http://centova.radios.pt:8559/stream', 'http://centova.radio.com.pt:8431/stream']
+        music: ['https://antennebadkreuznach-ais-edge-400b-dus-dtag-cdn.cast.addradio.de/antennebadkreuznach/live/mp3/high/stream.mp3', 'https://centova.radios.pt:8559/stream', 'https://centova.radio.com.pt:8431/stream']
     },
     {
         track: 'Bathurst',
@@ -75,7 +75,7 @@ const data = [
     {
         track: 'Silverstone',
         videos: ['yEpQTbN41X8', '5YKY0QjHaLY', 'h7dXIURDkyk'],
-        music: ['https://radio.canstream.co.uk:8039/live.mp3', 'https://stream.live.vc.bbcmedia.co.uk/bbc_radio_two', 'http://188.165.192.5:8067/;']
+        music: ['https://radio.canstream.co.uk:8039/live.mp3', 'https://stream.live.vc.bbcmedia.co.uk/bbc_radio_two', 'https://188.165.192.5:8067/;']
     }
 
 
