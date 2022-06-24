@@ -1,14 +1,30 @@
-[Live site](https://nifty-pike-27a831.netlify.app/)
 
-# Drive and Listen
 
-Simple overview of use/purpose.
+<div id="top"></div>
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+
+  <h3 align="center">Drive and Listen</h3>
+
+  <p align="center">
+    A fun app to test your sound effect knowledge
+    <br />
+    <a href="https://nifty-pike-27a831.netlify.app/">View Demo</a>
+  </p>
+</div>
 
 ## Description
 
-Racing onboards on any of your favourite tracks
+Racing onboards on any of your favourite tracks around the world. It also includes the local radio's that would be available if you were driving on the track.
+I used the Youtube API to create a custom play/pause and volume UI. As well as seamless video soruce changes.
 
-## Youtube API
+### Built With
 
-I used Youtubes video player API to imbed videos and control volume, pause/play, and ability to randomise video URLs
+* [Javascript](https://www.javascript.com/)
+* [Youtube API](https://developers.google.com/youtube/iframe_api_reference/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
