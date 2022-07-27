@@ -1,5 +1,3 @@
-
-
 <div id="top"></div>
 
 <!-- PROJECT LOGO -->
@@ -9,9 +7,9 @@
   <h3 align="center">Drive and Listen</h3>
 
   <p align="center">
-    A fun app to test your sound effect knowledge
+    Explore tracks form all around the world
     <br />
-    <a href="https://nifty-pike-27a831.netlify.app/">View Demo</a>
+    <a href="https://racingonboards.netlify.app/">View Demo</a>
   </p>
 </div>
 
@@ -22,9 +20,7 @@ I used the Youtube API to create a custom play/pause and volume UI. As well as s
 
 ### Built With
 
-* [Javascript](https://www.javascript.com/)
-* [Youtube API](https://developers.google.com/youtube/iframe_api_reference/)
+- [Javascript](https://www.javascript.com/)
+- [Youtube API](https://developers.google.com/youtube/iframe_api_reference/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
